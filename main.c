@@ -83,12 +83,6 @@ struct Vec grav_two_center_rotframe(struct Point p, double t) {
     return vec_sum(frot, vp);
 }
 
-struct Vec forceFunc(struct Point p, double t) {
-    //return kepler(p, t);
-    //return grav_two_center(p, t);
-    return grav_two_center_rot(p, t);
-}
-
 // ------------------Main------------------------------
 int main(int argc, char *argv[]) {
     char* filename_out = "out/output.txt";
@@ -214,7 +208,7 @@ int main(int argc, char *argv[]) {
 
         // Integrate some time to get away from the initial position
         for (i = 0; i < 1000; i++) { // Skip first N points
-            traj = integrator(traj, tstep, t_global, forceFunc);
+            traj = integrator(traj, tstep, t_global, forcePtr);
             t_global += tstep;
         }
         delta = point_diff(traj, traj_0);
@@ -222,7 +216,7 @@ int main(int argc, char *argv[]) {
         r_closest = r;
         // Start looking for the closest approach to where we started.
         for (i = i; i < numSteps-1; i++) {
-            traj = integrator(traj, tstep, t_global, forceFunc);
+            traj = integrator(traj, tstep, t_global, forcePtr);
             t_global += tstep;
 
             delta = point_diff(traj, traj_0);
