@@ -281,7 +281,7 @@
 	We compare the result of using the two algorithms in Figure \ref{fig:p3-orbit} for the same initial conditions. It can be see that there is strong agreement between the resulting trajectories. In fact, on the scale of the whole orbit, the two solutions are essentially indistinguishable.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1.0\linewidth]{diagrams/p3-orbit}
+		\includegraphics[width=1.0\linewidth]{diagrams/simTheory/p3-orbit}
 		\caption{Comparison of two trajectories. Both are started from the same initial conditions, but the trajectory shown in blue is propagated using the $\hat{T}_4$ operator in (\ref{T4}), and the trajectory shown in red is propagated using the 4th order Runge-Kutta-Nystrom (RKN4) algorithm. It can be seen that the two trajectories are essentially indistinguishable on this global scale. }
 		\label{fig:p3-orbit}
 	\end{figure}
@@ -294,7 +294,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1.0\linewidth]{diagrams/p3_orbitDifferences}
+		\includegraphics[width=1.0\linewidth]{diagrams/simTheory/p3_orbitDifferences}
 		\caption{The difference of the orbit positions at each time step is plotted. In plot (a) the spatial coordinates are shown with color gradient changing from black at $t=0$ to green at $t=5P$. In plot (b) the plot area is zoomed to the origin to show that the deviations between the two orbits is initially quite small. In plot (c) the time dependence of the spatial coordinate differences are shown. Additionally the value of $\Delta r^2 = \Delta x^2 + \Delta y^2$ is plotted on a log-y scale. Highlighted in with a red oval is the rapid increase in the deviations from the two trajectories.}
 		\label{fig:p3orbitdifferences}
 	\end{figure}
@@ -324,7 +324,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1.0\linewidth]{diagrams/p4_energyFluctuations}
+		\includegraphics[width=1.0\linewidth]{diagrams/simTheory/p4_energyFluctuations}
 		\caption{Energy Fluctuations. In graph (a) we see the energy of the RKN4 method (upper red) decreasing over many periods, whereas the symplectic method (lower blue) is stable in regard to drift over many orbital periods of the total system energy despite having significantly larger fluctuations.}
 		\label{fig:p4energyfluctuations}
 	\end{figure}
@@ -344,7 +344,7 @@
 	\end{equation}
 	With this definition, we plot the rotation angle $\Delta \theta$ over time for the same simulation data generated in the previous part. In order to investigate the scaling relation of this quantity against a changing time-step $\Delta t$, we plot the quantity $\Delta \theta/(\Delta t)^4$ for several values of the time-step.
 	\begin{figure}[H]
-		\includegraphics[width=1.0\linewidth]{diagrams/p5_precession}
+		\includegraphics[width=1.0\linewidth]{diagrams/simTheory/p5_precession}
 		\caption{Orbital precession.}
 		\label{fig:p5precession}
 	\end{figure}
@@ -461,7 +461,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1.0\linewidth]{diagrams/precessionCalc}
+		\includegraphics[width=1.0\linewidth]{diagrams/simTheory/precessionCalc}
 		\caption{Precession angle compared to analytic result.}
 		\label{fig:precessioncalc}
 	\end{figure}
