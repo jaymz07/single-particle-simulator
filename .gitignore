@@ -1,3 +1,7 @@
 out/*
 .ipynb_checkpoints/
 simulation
+tex-pdf/simulationTheory.aux
+tex-pdf/simulationTheory.log
+tex-pdf/simulationTheory.pdf
+tex-pdf/simulationTheory.synctex.gz
